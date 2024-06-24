@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bctwmwqipq67v"]
+
+[ext_resource type="Script" path="res://zaft/game/scripts/test-compute-shader.gd" id="1_vqhd4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Test_ComputeShader" type="Node" parent="."]
+script = ExtResource("1_vqhd4")
