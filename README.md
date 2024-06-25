@@ -8,6 +8,8 @@ I've been meaning to learn compute shaders for a while,
 and [Captain Coder's Learn You a Game Jam](https://itch.io/jam/learn-you-a-game-jam-2024)
 ended up being the final little push of motivation I needed to sit down and understand how this works.
 
+You can check my [learnings during this process](/learn-you-compute-shaders).
+
 ## Requirements to Run
 
 - Godot 4.3-beta2 or newer
