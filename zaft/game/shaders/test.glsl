@@ -12,8 +12,8 @@ layout(set = 1, binding = 0, std430) restrict buffer OutputDataBuffer {
   int data[];
 } buffer_output;
 
-int height = 256;
-int width = 256;
+int height = 128;
+int width = 128;
 
 // The code we want to execute in each invocation
 void main() {
@@ -28,10 +28,12 @@ void main() {
     for (int yi = -1; yi <= 1; yi++) {
       int xx = xi + col;
       int yy = yi + row;
-      if (xx >= 0 && xx < width) {
-        if (yy >= 0 && yy < height) {
-          int targetIndex = yy * width + xx;
-          sum = sum + buffer_input.data[targetIndex];
+      if (xi != 0 || yi != 0) {
+        if (xx >= 0 && xx < width) {
+          if (yy >= 0 && yy < height) {
+            int targetIndex = yy * width + xx;
+            sum = sum + buffer_input.data[targetIndex];
+          }
         }
       }
     }

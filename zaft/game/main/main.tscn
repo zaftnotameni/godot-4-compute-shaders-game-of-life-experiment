@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bctwmwqipq67v"]
+[gd_scene load_steps=3 format=3 uid="uid://bctwmwqipq67v"]
 
-[ext_resource type="Script" path="res://zaft/game/scripts/test-compute-shader.gd" id="1_vqhd4"]
+[ext_resource type="Script" path="res://zaft/game/scripts/game-of-life.gd" id="1_kenoi"]
+[ext_resource type="Script" path="res://zaft/game/scripts/game-of-life-ui.gd" id="2_dphg6"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Test_ComputeShader" type="Node" parent="."]
-script = ExtResource("1_vqhd4")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOfLifeUI" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_dphg6")
+
+[node name="GameOfLife" type="Node" parent="."]
+script = ExtResource("1_kenoi")
